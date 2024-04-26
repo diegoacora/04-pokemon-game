@@ -3,14 +3,14 @@
 </template>
 
 <script>
-import PokemonPage from './pages/PokemonPage.vue'
+import PokemonPage from "./pages/PokemonPage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    PokemonPage
-  }
-}
+    PokemonPage,
+  },
+};
 </script>
 
 <style>
