@@ -22,13 +22,15 @@
 </template>
 
 <script>
-import PokemonPicture from "@/components/PokemonPicture";
-import PokemonOptions from "@/components/PokemonOptions";
+import { defineAsyncComponent } from "vue";
 import getPokemonOptions from "@/helpers/getPokemonOptions";
 
 export default {
   name: "PokemonPage",
-  components: { PokemonPicture, PokemonOptions },
+  components: { 
+      PokemonPicture: defineAsyncComponent( () => import('@/components/PokemonPicture') ),
+      PokemonOptions: defineAsyncComponent( () => import('@/components/PokemonOptions') ) 
+    },
   data() {
     return {
       pokemonArr: [],

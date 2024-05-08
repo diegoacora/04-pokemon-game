@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import PokemonPage from "./pages/PokemonPage.vue";
+import { defineAsyncComponent } from "vue";
 
 export default {
   name: "App",
   components: {
-    PokemonPage,
+    PokemonPage: defineAsyncComponent( () => import('@/pages/PokemonPage.vue') )
   },
 };
 </script>
